@@ -1,3 +1,4 @@
+from ast import Str
 from persona import Persona
 from deportista import Deportista
 
@@ -11,8 +12,7 @@ class Futbolista(Persona,Deportista):
         self.piernaHabil=piernaHabil
         Futbolista.listaFutbolistas.append(self)
     def __str__(self):
-        return ("mi nombre es ",self.nombre," soy profesional en el deporte ", self.deporte, " Tengo ",self.edad,
-        " años de edad y llevo ", self.añosPracticando, " años en el deporte")
+        return "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.nombre, self.deporte, self.edad, self.añosPracticando)
     def getGolesMarcados(self):
         return self.golesMarcados
     def getTarjetasRojas(self):
